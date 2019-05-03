@@ -7,6 +7,7 @@ import io.ktor.freemarker.FreeMarker
 import io.ktor.freemarker.FreeMarkerContent
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.content.files
+import io.ktor.http.content.resources
 import io.ktor.http.content.static
 import io.ktor.request.receiveParameters
 import io.ktor.response.respond
@@ -44,11 +45,9 @@ fun main(args: Array<String>) {
         }
 
         routing {
-
-            static("static") {
-                files("css")
+            static("/static") {
+                resources("static")
             }
-
             get("article/{id}") {
                 /*
                 val article = model.getArticle(id);
@@ -103,6 +102,7 @@ fun main(args: Array<String>) {
             }
 
             get("/article/add") {
+
                 call.respond(FreeMarkerContent("form_article.ftl", null, "e"))
             }
 
