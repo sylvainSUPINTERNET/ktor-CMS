@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="532adb7c-ed06-48a3-aaf8-7657e5445fa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/form_article.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/form_article.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/article.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/article.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/form_article.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/form_article.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Articles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Articles.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/IndexContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/IndexContext.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -93,7 +94,47 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="77" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ConnectionPool.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
+              <folding>
+                <element signature="e#26#132#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="59" column="130" selection-start-line="59" selection-start-column="130" selection-end-line="59" selection-end-column="130" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -103,8 +144,8 @@
         <option value="Class" />
         <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
-        <option value="Kotlin File" />
         <option value="CSS File" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -127,8 +168,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/entities/Users.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/freemarker_implicit.ftl" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/entities/Articles.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/IndexContext.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/article.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/ConnectionPool.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ConnectionPool.kt" />
@@ -137,7 +176,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.java" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.java" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/ArticleListControllerImpl.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleListController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleByIdController.kt" />
@@ -149,8 +187,16 @@
         <option value="$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/custom.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/custom.css" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/form_article.ftl" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Comments.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/IndexContext.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/CommentContext.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/ArticleLinkCommentsControllerImpl.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleLinkCommentsController.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Articles.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/article.ftl" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt" />
       </list>
     </option>
   </component>
@@ -160,10 +206,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="821" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -172,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,7 +292,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMS-IIM" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +319,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -281,7 +327,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556892825953" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556988210790" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -427,7 +473,8 @@
       <option name="presentableId" value="Default" />
       <updated>1556784011486</updated>
       <workItem from="1556784015982" duration="197000" />
-      <workItem from="1556784234586" duration="37753000" />
+      <workItem from="1556784234586" duration="39531000" />
+      <workItem from="1556980757263" duration="6645000" />
     </task>
     <servers />
   </component>
@@ -464,7 +511,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37950000" />
+    <option name="totallyTimeSpent" value="46373000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,9 +523,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="817" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -487,19 +535,18 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.32965517" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39448276" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.25797504" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39389735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871014" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32871014" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5117241" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5103448" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.46185854" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4985694" weight="0.32689655" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4985694" weight="0.3259362" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297568" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -510,6 +557,7 @@
       <window_info anchor="right" id="Database" order="7" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297568" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
@@ -553,42 +601,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/BlogApp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="e#14#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BlogApp.kt" />
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1968" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/entities/Articles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/freemarker_implicit.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Users.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/entities/Articles.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/freemarker_implicit.ftl" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.2.1/75e0ac676a7c7ef6239179b415d86ed002a7cc2c/kotlinx-coroutines-core-1.2.1-sources.jar!/jvmMain/scheduling/CoroutineScheduler.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -610,81 +630,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/274777a0-83d4-4a5f-b7bd-eda1f767689f/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/IndexContext.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ConnectionPool.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#26#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-end-line="25" />
-          <folding>
-            <element signature="e#26#213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Article.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.java" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/AppComponents.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="e#26#141#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -715,27 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleByIdController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Articles.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -743,13 +677,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/form_article.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        <state relative-caret-position="176">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/ArticleLinkCommentsControllerImpl.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleLinkCommentsController.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/CommentContext.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Users.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Comments.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/AppComponents.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="e#26#773#0" expanded="true" />
+            <element signature="e#26#141#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Articles.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/sql/ResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="175" column="12" selection-start-line="175" selection-start-column="12" selection-end-line="175" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -760,10 +732,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/form_article.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/tpl/IndexContext.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="64">
+          <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleByIdController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -779,8 +765,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/ArticleByIdControllerImpl.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="144">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#34#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="77" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ConnectionPool.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#26#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="59" column="130" selection-start-line="59" selection-start-column="130" selection-end-line="59" selection-end-column="130" />
         </state>
       </provider>
     </entry>

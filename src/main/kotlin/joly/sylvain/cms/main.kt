@@ -68,6 +68,15 @@ fun main(args: Array<String>) {
                         }
 
                         override fun displayArticleById(article: Articles?) {
+                            println("_________")
+                            println("_________")
+                            println("_________")
+
+                            print(article)
+
+                            println("_________")
+                            println("_________")
+
                             launch {
                                 call.respond(FreeMarkerContent("article.ftl", article, "e"))
                             }

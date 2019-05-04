@@ -4,9 +4,10 @@ import io.ktor.application.call
 import io.ktor.freemarker.FreeMarkerContent
 import io.ktor.response.respond
 import joly.sylvain.cms.model.Articles
+import joly.sylvain.cms.model.Comments
 import joly.sylvain.cms.tpl.IndexContext
 
-class MysqlModel(val pool: ConnectionPool): Model {
+class MysqlModel(val pool: ConnectionPool) : Model {
     override fun getArticleList(): List<Articles> {
         val list = ArrayList<Articles>();
 
@@ -16,7 +17,8 @@ class MysqlModel(val pool: ConnectionPool): Model {
             connection.prepareStatement("SELECT id, title, text FROM article").use { stmt ->
                 stmt.executeQuery().use { results ->
                     while (results.next()) {
-                        list += Articles(results.getInt("id"), results.getString("title"), null)
+                        print(results.getString("title"))
+                        list += Articles(results.getInt("id"), results.getString("title"), null, null)
                     }
                 }
 
@@ -26,17 +28,46 @@ class MysqlModel(val pool: ConnectionPool): Model {
     }
 
     override fun getArticle(id: Int): Articles? {
-        pool.useConnection { connection ->
+        val commentList = ArrayList<Comments>();
 
-            connection.prepareStatement("SELECT * FROM article WHERE id = ?").use { stmt ->
-                stmt.setInt(1, id) // en JDBC le premier index commence à 1
-                stmt.executeQuery().use { result ->
-                    if (result.next()) {
-                        return Articles(result.getInt("id"), result.getString("title"), result.getString("text"))
+
+
+        pool.useConnection { connection ->
+            var article_title = ""
+            var article_id = 0;
+            var article_text = ""
+            connection.prepareStatement("SELECT a.title, a.text, c.* FROM comment as c INNER JOIN article as a on c.article_id = a.id WHERE a.id = ?")
+                .use { stmt ->
+                    stmt.setInt(1, id) // en JDBC le premier index commence à 1
+                    stmt.executeQuery().use { results ->
+
+                        while (results.next()) {
+                            commentList += Comments(
+                                results.getInt("id"),
+                                results.getString("content"),
+                                results.getInt("article_id")
+                            )
+                            article_text = results.getString("text")
+                            article_id = results.getInt("article_id")
+                            article_title = results.getString("title")
+                        }
+                        if(commentList.isEmpty()){
+                            connection.prepareStatement("SELECT * FROM article WHERE id = ?")
+                                .use { stmt ->
+                                    stmt.setInt(1, id) // en JDBC le premier index commence à 1
+                                    stmt.executeQuery().use { result ->
+                                        if(result.next()){
+                                            return Articles(result.getInt("id"), result.getString("title"), result.getString("text"), null)
+                                        }
+                                    }
+                                }
+                        }else{
+                            return Articles(article_id, article_title, article_text, commentList)
+                        }
                     }
                 }
-            }
         }
+
         return null
     }
 }
