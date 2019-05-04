@@ -14,6 +14,16 @@
 <h1 class="text-center">Article: ${title}</h1>
 
 <p>${text}</p>
+
+
+<form method="post" action="/article" class="m-5">
+    <div class="form-group">
+        <textarea class="form-control" id="com_content_field" rows="3" name="com_content" placeholder="Your comment ..." required></textarea>
+        <input type="hidden" value="${id}" name="article_id">
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+</form>
+
 <ul class="list-group">
     <#if comments?has_content>
         <#list comments as x>
@@ -24,10 +34,10 @@
             No comments for the moment !
         </div>
     </#if>
-
-
-
 </ul>
+
+
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

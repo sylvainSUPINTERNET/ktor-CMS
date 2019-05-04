@@ -11,6 +11,7 @@ import io.ktor.http.content.resources
 import io.ktor.http.content.static
 import io.ktor.request.receiveParameters
 import io.ktor.response.respond
+import io.ktor.response.respondRedirect
 import io.ktor.response.respondText
 import io.ktor.routing.get
 import io.ktor.routing.post
@@ -68,15 +69,6 @@ fun main(args: Array<String>) {
                         }
 
                         override fun displayArticleById(article: Articles?) {
-                            println("_________")
-                            println("_________")
-                            println("_________")
-
-                            print(article)
-
-                            println("_________")
-                            println("_________")
-
                             launch {
                                 call.respond(FreeMarkerContent("article.ftl", article, "e"))
                             }
@@ -110,25 +102,27 @@ fun main(args: Array<String>) {
                 controller.start()
             }
 
-            get("/article/add") {
-
-                call.respond(FreeMarkerContent("form_article.ftl", null, "e"))
-            }
-
             post("/article") {
                 val post = call.receiveParameters()
-                val title = post["article_title"]
-                val text = post["article_text"]
-                /*
-                val stmt = connection.prepareStatement("INSERT INTO article (title, text) VALUES (? ?) ")
-                stmt.setString(1, title)
-                stmt.setString(2, text)
+                val content = post["com_content"]
+                val article_id = post["article_id"]!!.toInt()
 
-                val result = stmt.execute()
+                val controller = appComponents.createComment(object: CommentCreateController.View {
+                    override fun createdSuccess() {
+                        launch {
+                            //call.respondText { "Posted with success ! ${content} ${article_id}" }
+                            call.respondRedirect("/article/${article_id}", permanent = true)
+                        }
+                    }
 
-                */
+                    override fun createdError() {
+                        launch{
+                            call.respondText { "Oups ! Something wrong happend !"}
+                        }
+                    }
+                })
 
-                call.respondText { "Posted with success !" }
+                controller.start(content, article_id)
             }
 
         }

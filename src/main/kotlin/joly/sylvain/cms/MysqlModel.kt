@@ -8,6 +8,19 @@ import joly.sylvain.cms.model.Comments
 import joly.sylvain.cms.tpl.IndexContext
 
 class MysqlModel(val pool: ConnectionPool) : Model {
+    override fun createComment(content: String?, article_id: Int): Boolean {
+        pool.useConnection { connection ->
+            connection.prepareStatement("INSERT INTO comment (content, article_id) VALUES (?, ?)").use { stmt->
+                stmt.setString(1, content)
+                stmt.setInt(2, article_id)
+                stmt.executeUpdate()
+                return true
+            }
+
+        }
+        return false
+    }
+
     override fun getArticleList(): List<Articles> {
         val list = ArrayList<Articles>();
 
@@ -45,10 +58,10 @@ class MysqlModel(val pool: ConnectionPool) : Model {
                             commentList += Comments(
                                 results.getInt("id"),
                                 results.getString("content"),
-                                results.getInt("article_id")
+                                id // article id
                             )
                             article_text = results.getString("text")
-                            article_id = results.getInt("article_id")
+                            article_id = id // article id
                             article_title = results.getString("title")
                         }
                         if(commentList.isEmpty()){

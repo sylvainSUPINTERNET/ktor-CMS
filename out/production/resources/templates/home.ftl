@@ -7,12 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/custom.css">
 
     <title>Home | Accueil</title>
 </head>
 <body class="container">
 <h1 class="text-center">Article resume</h1>
-<a href="/article/add" class="btn bnt-lg">Ajouter article</a>
+<p class="customStyleStatic">This text use custom.css from static file custom.css</p>
 <div>
     <ul>
     <#list list as article>

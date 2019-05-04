@@ -2,6 +2,7 @@ package joly.sylvain.cms
 
 import joly.sylvain.cms.control.ArticleByIdControllerImpl
 import joly.sylvain.cms.control.ArticleListControllerImpl
+import joly.sylvain.cms.control.CommentCreateControllerImpl
 
 class AppComponents(mySqlUrl: String, mySqlUser: String, mySqlPassword: String) { // sans val dans le constructor les valeurs sont accessible que dans le constructeur
 
@@ -23,5 +24,9 @@ class AppComponents(mySqlUrl: String, mySqlUser: String, mySqlPassword: String) 
 
     fun getArticleController(view: ArticleByIdController.View): ArticleByIdController {
         return ArticleByIdControllerImpl(getModel(), view )
+    }
+
+    fun createComment(view: CommentCreateController.View): CommentCreateController {
+        return CommentCreateControllerImpl(getModel(), view)
     }
 }
