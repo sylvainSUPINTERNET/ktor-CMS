@@ -1,9 +1,6 @@
 package joly.sylvain.cms
 
-import joly.sylvain.cms.control.ArticleByIdControllerImpl
-import joly.sylvain.cms.control.ArticleListControllerImpl
-import joly.sylvain.cms.control.AuthControllerImpl
-import joly.sylvain.cms.control.CommentCreateControllerImpl
+import joly.sylvain.cms.control.*
 import org.mindrot.jbcrypt.BCrypt
 
 class AppComponents(mySqlUrl: String, mySqlUser: String, mySqlPassword: String) { // sans val dans le constructor les valeurs sont accessible que dans le constructeur
@@ -35,5 +32,9 @@ class AppComponents(mySqlUrl: String, mySqlUser: String, mySqlPassword: String) 
 
     fun login(view: AuthController.View): AuthController {
         return AuthControllerImpl(getModel(), view)
+    }
+
+    fun deleteComment(view: CommentDeleteController.View): CommentDeleteController {
+        return CommentDeleteControllerImpl(getModel(), view)
     }
 }

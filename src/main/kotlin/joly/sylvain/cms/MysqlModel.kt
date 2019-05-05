@@ -1,14 +1,21 @@
 package joly.sylvain.cms
 
-import io.ktor.application.call
-import io.ktor.freemarker.FreeMarkerContent
-import io.ktor.response.respond
 import joly.sylvain.cms.model.Articles
 import joly.sylvain.cms.model.Comments
 import joly.sylvain.cms.model.Users
-import joly.sylvain.cms.tpl.IndexContext
 
 class MysqlModel(val pool: ConnectionPool) : Model {
+    override fun removeCommentById(id: Int): Boolean {
+        pool.useConnection { connection ->
+            connection.prepareStatement("DELETE FROM comment WHERE id = ? ").use {stmt->
+                stmt.setInt(1, id)
+                stmt.executeUpdate()
+                return true;
+            }
+        }
+        return false
+    }
+
     override fun getUserBy(email: String): Users? {
         pool.useConnection { connection ->
             connection.prepareStatement("SELECT * from users WHERE users.email = ?").use { stmt ->

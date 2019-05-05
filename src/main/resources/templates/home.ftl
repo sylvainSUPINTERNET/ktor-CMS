@@ -14,6 +14,7 @@
 <body class="container">
 <h1 class="text-center">Article resume</h1>
 <p class="customStyleStatic">This text use custom.css from static file custom.css</p>
+You are not logged -> <a href="/authentication">Login as admin</a> if you want to delete some comments
 <div>
     <ul>
     <#list list as article>

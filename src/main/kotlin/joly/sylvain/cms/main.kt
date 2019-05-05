@@ -58,16 +58,7 @@ fun main(args: Array<String>) {
             static("/static") {
                 resources("static")
             }
-            get("article/{id}") {
-                /*
-                val article = model.getArticle(id);
-
-                if(article != null){
-                    call.respond(FreeMarkerContent("article.ftl", article, "e"))
-                } else {
-                    call.respond(HttpStatusCode.NotFound)
-                }
-                */
+            get("/article/{id}") {
                 val controller =
                     appComponents.getArticleController(object : ArticleByIdController.View {
                         // object -> class anonyme
@@ -79,7 +70,11 @@ fun main(args: Array<String>) {
 
                         override fun displayArticleById(article: Articles?) {
                             launch {
-                                call.respond(FreeMarkerContent("article.ftl", article, "e"))
+                                if(call.sessions.get<AuthSession>() == null){
+                                    call.respond(FreeMarkerContent("article.ftl", article, "e"))
+                                } else {
+                                    call.respond(FreeMarkerContent("article_admin.ftl", article, "e"))
+                                }
                             }
                         }
 
@@ -93,19 +88,18 @@ fun main(args: Array<String>) {
             }
 
             get("/") {
-                if(call.sessions.get<AuthSession>() == null){
-                    print("USER NOT LOGGED")
-                } else {
-                    print("LOGGED");
-                    print(call.sessions.get("AUTH_COOKIE"))
-                }
+
                 val controller = appComponents.getArticleListController(object : ArticleListController.View {
                     override fun displayArticleList(list: List<Articles>) {
                         val context = IndexContext(list);
 
 
                         launch {
-                            call.respond(FreeMarkerContent("home.ftl", context, "e"))
+                            if(call.sessions.get<AuthSession>() == null){
+                                call.respond(FreeMarkerContent("home.ftl", context, "e"))
+                            } else {
+                                call.respond(FreeMarkerContent("home_admin.ftl", context, "e"))
+                            }
                         }
                     }
 
@@ -135,6 +129,32 @@ fun main(args: Array<String>) {
                 })
 
                 controller.start(content, article_id)
+            }
+            get("/comment/{comment_id}/delete/{article_id}") {
+                val comment_id = call.parameters["comment_id"]!!.toInt();
+                val article_id = call.parameters["article_id"]!!.toInt();
+
+                val controller = appComponents.deleteComment(object: CommentDeleteController.View {
+                    override fun deletedSuccess() {
+
+                        launch {
+                            if(call.sessions.get<AuthSession>() != null){
+                                call.respondRedirect("/article/${article_id}", permanent = true)
+                            } else {
+                                call.respondText { "Oups, something wrong occured ! Please, try again." }
+                            }
+                        }
+                    }
+
+                    override fun deletedError() {
+                        launch {
+                            call.respondText { "Oups, something wrong occured ! Please, try again." }
+                        }
+                    }
+
+                })
+
+                controller.start(comment_id);
             }
 
             /**
@@ -184,7 +204,10 @@ fun main(args: Array<String>) {
 
 
             }
-
+            get("/disconnect"){
+                call.sessions.clear("AUTH_COOKIE") // clear old session
+                call.respondRedirect("/", permanent = true)
+            }
         }
     }.start(wait = true)
 }
