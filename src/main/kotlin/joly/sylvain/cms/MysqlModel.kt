@@ -5,6 +5,17 @@ import joly.sylvain.cms.model.Comments
 import joly.sylvain.cms.model.Users
 
 class MysqlModel(val pool: ConnectionPool) : Model {
+    override fun removeArticleById(id: Int): Boolean {
+        pool.useConnection { connection ->
+            connection.prepareStatement("DELETE FROM article WHERE id = ? ").use {stmt->
+                stmt.setInt(1, id)
+                stmt.executeUpdate()
+                return true;
+            }
+        }
+        return false
+    }
+
     override fun createArticle(text: String?, title: String): Boolean {
         pool.useConnection { connection ->
             connection.prepareStatement("INSERT INTO article (text, title) VALUES (?, ?)").use { stmt->

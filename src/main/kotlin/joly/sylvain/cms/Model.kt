@@ -12,4 +12,5 @@ interface Model {
     fun getUserBy(email: String): Users?
     fun removeCommentById(id: Int): Boolean
     fun createArticle(text: String?, title: String): Boolean
+    fun removeArticleById(id: Int): Boolean
 }

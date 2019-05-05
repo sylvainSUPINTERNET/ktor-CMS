@@ -11,7 +11,14 @@
     <title>Article | ${title}</title>
 </head>
 <body class="container">
-<h1 class="text-center">Article: ${title}</h1>
+<h1 class="text-center">Article: ${title}
+</h1>
+<div class="row">
+    <div class="col">
+        <a href="/article/admin/${id}/delete" class="btn btn-warning btn-md m-5">Delete article (<small>Comments linked will deleted</small>)</a>
+    </div>
+</div>
+
 <p>(logged as admin)</p>
 
 <p>${text}</p>

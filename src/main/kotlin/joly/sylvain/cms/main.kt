@@ -141,6 +141,32 @@ fun main(args: Array<String>) {
                 controller.start(article_text,article_title)
             }
 
+            get("/article/admin/{article_id}/delete"){
+                val article_id = call.parameters["article_id"]!!.toInt();
+
+                val controller = appComponents.deleteArticle(object: ArticleDeleteController.View {
+                    override fun deletedSuccess() {
+
+                        launch {
+                            if(call.sessions.get<AuthSession>() != null){
+                                call.respondRedirect("/")
+                            } else {
+                                call.respondText { "Oups, something wrong occured ! Please, try again." }
+                            }
+                        }
+                    }
+
+                    override fun deletedError() {
+                        launch {
+                            call.respondText { "Oups, something wrong occured ! Please, try again." }
+                        }
+                    }
+
+                })
+
+                controller.start(article_id)
+            }
+
             post("/comment") {
                 val post = call.receiveParameters()
                 val content = post["com_content"]
