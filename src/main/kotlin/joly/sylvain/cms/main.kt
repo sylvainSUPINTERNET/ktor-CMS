@@ -28,18 +28,21 @@ import joly.sylvain.cms.tpl.IndexContext
 import kotlinx.coroutines.launch
 import java.util.*
 import org.mindrot.jbcrypt.BCrypt
+import com.typesafe.config.ConfigFactory
+
+
 
 
 class App
 
 fun main(args: Array<String>) {
 
-
+    val conf = ConfigFactory.load()
     //appcomponents -> container d'injection de dépendances (choisit les singletons / instancie si besoin etc)
     val appComponents = AppComponents(
-        "jdbc:mysql://localhost:8889/CMS?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
-        "root",
-        "root"
+        conf.getString("application.jbdc.uri"),
+        conf.getString("application.jbdc.user"),
+        conf.getString("application.jbdc.password")
     )
     embeddedServer(Netty, 8080) {
         install(FreeMarker) {
@@ -117,7 +120,7 @@ fun main(args: Array<String>) {
                     override fun createdSuccess() {
                         launch {
                             //call.respondText { "Posted with success ! ${content} ${article_id}" }
-                            call.respondRedirect("/article/${article_id}", permanent = true)
+                            call.respondRedirect("/article/${article_id}")
                         }
                     }
 
@@ -139,7 +142,7 @@ fun main(args: Array<String>) {
 
                         launch {
                             if(call.sessions.get<AuthSession>() != null){
-                                call.respondRedirect("/article/${article_id}", permanent = true)
+                                call.respondRedirect("/article/${article_id}")
                             } else {
                                 call.respondText { "Oups, something wrong occured ! Please, try again." }
                             }
@@ -180,7 +183,7 @@ fun main(args: Array<String>) {
                             call.sessions.set(AuthSession(user.username, user.email, user.role, halfAnHourLater)) // Sets a session of this type
 
                             if(call.sessions.get<AuthSession>() != null){
-                                call.respondRedirect("/", permanent = true)
+                                call.respondRedirect("/")
                             } else {
                                 call.respondText {
                                     "Error is occured, please try again."
@@ -204,9 +207,9 @@ fun main(args: Array<String>) {
 
 
             }
-            get("/disconnect"){
+            get("/auth/logout"){
                 call.sessions.clear("AUTH_COOKIE") // clear old session
-                call.respondRedirect("/", permanent = true)
+                call.respond(FreeMarkerContent("logout_success.ftl", null, "e"))
             }
         }
     }.start(wait = true)

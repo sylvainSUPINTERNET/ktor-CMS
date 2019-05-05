@@ -27,7 +27,9 @@
 <ul class="list-group">
     <#if comments?has_content>
         <#list comments as x>
-            <li class="list-group-item"> ${comments[x?index].content} </li>
+            <div class="jumbotron">
+                <li class="list-group-item"> ${comments[x?index].content}</li>
+            </div>
         </#list>
     <#else>
         <div class="alert alert-warning text-center" role="alert">
@@ -35,7 +37,6 @@
         </div>
     </#if>
 </ul>
-
 
 
 <!-- Optional JavaScript -->
