@@ -22,6 +22,7 @@ dependencies {
     implementation "io.ktor:ktor-freemarker:$ktor_version"
     implementation "mysql:mysql-connector-java:8.0.16"
     testCompile 'junit:junit:4.12'
+    implementation 'org.mindrot:jbcrypt:0.4'
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0"
 }
 

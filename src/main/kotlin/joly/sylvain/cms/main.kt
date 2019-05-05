@@ -1,6 +1,7 @@
 package joly.sylvain.cms
 
 import freemarker.cache.ClassTemplateLoader
+import io.ktor.application.application
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.freemarker.FreeMarker
@@ -18,12 +19,15 @@ import io.ktor.routing.post
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import io.ktor.sessions.*
 import joly.sylvain.cms.control.ArticleByIdControllerImpl
 import joly.sylvain.cms.control.ArticleListControllerImpl
 import joly.sylvain.cms.model.Articles
+import joly.sylvain.cms.model.Users
 import joly.sylvain.cms.tpl.IndexContext
 import kotlinx.coroutines.launch
 import java.util.*
+import org.mindrot.jbcrypt.BCrypt
 
 
 class App
@@ -37,13 +41,18 @@ fun main(args: Array<String>) {
         "root",
         "root"
     )
-
-
-
     embeddedServer(Netty, 8080) {
         install(FreeMarker) {
             templateLoader = ClassTemplateLoader(App::class.java.classLoader, "templates")
         }
+
+        install(Sessions){
+            cookie<AuthSession>("AUTH_COOKIE"){
+                cookie.path = "/"
+            }
+        }
+
+
 
         routing {
             static("/static") {
@@ -84,14 +93,17 @@ fun main(args: Array<String>) {
             }
 
             get("/") {
-                /*
-                val articles = model.getArticleList();
-                val context = IndexContext(articles);
-                call.respond(FreeMarkerContent("home.ftl", context, "e"))
-                */
+                if(call.sessions.get<AuthSession>() == null){
+                    print("USER NOT LOGGED")
+                } else {
+                    print("LOGGED");
+                    print(call.sessions.get("AUTH_COOKIE"))
+                }
                 val controller = appComponents.getArticleListController(object : ArticleListController.View {
                     override fun displayArticleList(list: List<Articles>) {
                         val context = IndexContext(list);
+
+
                         launch {
                             call.respond(FreeMarkerContent("home.ftl", context, "e"))
                         }
@@ -123,6 +135,54 @@ fun main(args: Array<String>) {
                 })
 
                 controller.start(content, article_id)
+            }
+
+            /**
+             * Authentication
+             */
+            get("/authentication") {
+                    call.respond(FreeMarkerContent("authentication.ftl", null, "e"))
+            }
+            post("/authentication") {
+                val post = call.receiveParameters()
+                val email = post["email"]
+                val password = post["password"]
+               val controller =  appComponents.login(object: AuthController.View {
+                    override fun loginSuccess(user: Users) {
+                        launch {
+                            call.sessions.clear("AUTH_COOKIE") // clear old session
+
+                            val sessionAuth = call.sessions.get<AuthSession>()// Gets a session of this type or null if not available
+                            val currentTime = System.currentTimeMillis()
+                            //1 800 000 miliseconds = 30 minutes
+                            val halfAnHourLater = currentTime + 1800000
+
+                            call.sessions.set(AuthSession(user.username, user.email, user.role, halfAnHourLater)) // Sets a session of this type
+
+                            if(call.sessions.get<AuthSession>() != null){
+                                call.respondRedirect("/", permanent = true)
+                            } else {
+                                call.respondText {
+                                    "Error is occured, please try again."
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    override fun loginError() {
+                        launch {
+                            call.respondText {
+                                "Invalid credentials."
+                            }
+                        }
+                    }
+
+                })
+                controller.start(email, password)
+
+
             }
 
         }

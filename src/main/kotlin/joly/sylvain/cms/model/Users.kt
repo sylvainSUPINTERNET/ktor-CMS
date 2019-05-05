@@ -1,3 +1,3 @@
 package joly.sylvain.cms.model
 
-data class Users(val name: String, val age: Int )
+data class Users(val username: String, val email: String, val role: String, val password: String)

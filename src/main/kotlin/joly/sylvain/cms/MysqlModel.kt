@@ -5,9 +5,26 @@ import io.ktor.freemarker.FreeMarkerContent
 import io.ktor.response.respond
 import joly.sylvain.cms.model.Articles
 import joly.sylvain.cms.model.Comments
+import joly.sylvain.cms.model.Users
 import joly.sylvain.cms.tpl.IndexContext
 
 class MysqlModel(val pool: ConnectionPool) : Model {
+    override fun getUserBy(email: String): Users? {
+        pool.useConnection { connection ->
+            connection.prepareStatement("SELECT * from users WHERE users.email = ?").use { stmt ->
+                stmt.setString(1, email)
+                stmt.executeQuery().use {rs ->
+                    if(rs.next()){
+                        return Users(rs.getString("username"), rs.getString("email"), rs.getString("role"), rs.getString("password"))
+                    } else {
+                        return null;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
     override fun createComment(content: String?, article_id: Int): Boolean {
         pool.useConnection { connection ->
             connection.prepareStatement("INSERT INTO comment (content, article_id) VALUES (?, ?)").use { stmt->
