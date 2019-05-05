@@ -111,7 +111,8 @@ fun main(args: Array<String>) {
                 controller.start()
             }
 
-            post("/article") {
+
+            post("/comment") {
                 val post = call.receiveParameters()
                 val content = post["com_content"]
                 val article_id = post["article_id"]!!.toInt()

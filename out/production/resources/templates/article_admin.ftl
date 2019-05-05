@@ -17,7 +17,7 @@
 <p>${text}</p>
 
 
-<form method="post" action="/article" class="m-5">
+<form method="post" action="/comment" class="m-5">
     <div class="form-group">
         <textarea class="form-control" id="com_content_field" rows="3" name="com_content" placeholder="Your comment ..." required></textarea>
         <input type="hidden" value="${id}" name="article_id">

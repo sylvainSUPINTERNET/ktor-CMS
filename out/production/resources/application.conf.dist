@@ -1,0 +1,3 @@
+application.jbdc.uri="jdbc:mysql://localhost:{your_mysql_PORT}/{database_name (CMS if you use my dump) }?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+application.jbdc.user="{YOUR_USER}"
+application.jbdc.password="{YOUR_PASSWORD}"
