@@ -14,11 +14,15 @@
 <body class="container">
 <h1 class="text-center">Article resume</h1>
 <p class="customStyleStatic">This text use custom.css from static file custom.css</p>
-You are not logged -> <a href="/authentication">Login as admin</a> if you want to delete some comments
+You are not logged -> <a href="/authentication">Login as admin</a> if you want to delete some comments / add and remove articles
 <div>
-    <ul>
+    <ul class="list-group">
     <#list list as article>
-        <a href="/article/${article.id}">${article.title}</a>
+        <div class="jumbotron">
+            <li class="list-group-item">
+                <a href="/article/${article.id}">${article.title}</a>
+            </li>
+        </div>
     </#list>
     </ul>
 </div>

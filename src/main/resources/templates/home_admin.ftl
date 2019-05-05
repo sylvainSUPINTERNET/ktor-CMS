@@ -15,15 +15,26 @@
 <h1 class="text-center">Article resume</h1>
 <p class="customStyleStatic">This text use custom.css from static file custom.css</p>
 <a href="/authentication">Log in</a> (logged as admin)
-<br>
-<a href="/auth/logout" class="btn btn-md btn-primary">Disconnect</a>
-<br>
-<a href="/article/admin" class="btn btn-md btn-success">Add new article</a>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">
+            <a href="/auth/logout">Disconnect</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            <a href="/article/admin">Add new article</a>
+        </li>
+
+    </ol>
+</nav>
 <div>
-    <ul>
-    <#list list as article>
-        <a href="/article/${article.id}">${article.title}</a>
-    </#list>
+    <ul class="list-group">
+        <#list list as article>
+            <div class="jumbotron">
+                <li class="list-group-item">
+                    <a href="/article/${article.id}">${article.title}</a>
+                </li>
+            </div>
+        </#list>
     </ul>
 </div>
 
