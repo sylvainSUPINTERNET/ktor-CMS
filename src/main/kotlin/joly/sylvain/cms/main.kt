@@ -111,6 +111,35 @@ fun main(args: Array<String>) {
                 controller.start()
             }
 
+            get("/article/admin") {
+                if(call.sessions.get<AuthSession>() == null){
+                    call.respond(HttpStatusCode.Forbidden, "")
+                } else {
+                    call.respond(FreeMarkerContent("article_form_admin.ftl", null, "e"))
+                }
+            }
+
+            post("/article/admin"){
+                val post = call.receiveParameters()
+                val article_title = post["article_title"]!!.toString()
+                val article_text = post["article_text"]
+
+                val controller = appComponents.createArticle(object: ArticleCreateController.View {
+                    override fun createdSuccess() {
+                        launch {
+                            call.respondRedirect("/")
+                        }
+                    }
+
+                    override fun createdError() {
+                        launch {
+                            call.respondText { "Oups ! Something wrong happend !"}
+                        }
+                    }
+                })
+
+                controller.start(article_text,article_title)
+            }
 
             post("/comment") {
                 val post = call.receiveParameters()

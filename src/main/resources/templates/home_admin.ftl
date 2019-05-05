@@ -16,7 +16,9 @@
 <p class="customStyleStatic">This text use custom.css from static file custom.css</p>
 <a href="/authentication">Log in</a> (logged as admin)
 <br>
-<a href="/auth/logout">Disconnect</a>
+<a href="/auth/logout" class="btn btn-md btn-primary">Disconnect</a>
+<br>
+<a href="/article/admin" class="btn btn-md btn-success">Add new article</a>
 <div>
     <ul>
     <#list list as article>

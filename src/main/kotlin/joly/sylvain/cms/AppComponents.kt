@@ -37,4 +37,8 @@ class AppComponents(mySqlUrl: String, mySqlUser: String, mySqlPassword: String) 
     fun deleteComment(view: CommentDeleteController.View): CommentDeleteController {
         return CommentDeleteControllerImpl(getModel(), view)
     }
+
+    fun createArticle(view: ArticleCreateController.View): ArticleCreateController {
+        return ArticleCreateControllerImpl(getModel(), view);
+    }
 }

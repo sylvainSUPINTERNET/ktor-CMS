@@ -7,25 +7,24 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/custom.css">
-
-    <title>Home | Accueil</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Article | Admin</title>
 </head>
 <body class="container">
-<h1 class="text-center">Article resume</h1>
-<p class="customStyleStatic">This text use custom.css from static file custom.css</p>
-<a href="/authentication">Log in</a> (logged as admin)
-<br>
-<a href="/auth/logout" class="btn btn-md btn-primary">Disconnect</a>
-<br>
-<a href="/article/admin" class="btn btn-md btn-success">Add new article</a>
-<div>
-    <ul>
-    <#list list as article>
-        <a href="/article/${article.id}">${article.title}</a>
-    </#list>
-    </ul>
-</div>
+<h1 class="text-center">Ajouter un article</h1>
+<p>(logged as admin)</p>
+
+
+<form method="post" action="/article/admin" class="m-5">
+    <div class="form-group">
+        <input class="form-control" rows="3" name="article_title" placeholder="title ..." required />
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" id="com_content_field" rows="3" name="article_text" placeholder="Your text ..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Confirmed</button>
+</form>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
