@@ -4,17 +4,19 @@ import com.nhaarman.mockitokotlin2.*
 import joly.sylvain.cms.control.ArticleByIdControllerImpl
 import joly.sylvain.cms.control.ArticleListControllerImpl
 import joly.sylvain.cms.model.Articles
+import joly.sylvain.cms.model.Comments
 import org.junit.Assert.*
 import org.junit.Test
+import java.util.ArrayList
+
+
 
 class PresenterTests {
 
+
     @Test
     fun testArticleListPrensenter(){
-        val list = listOf(
-            Articles(1, "Titlte", "ZEOAKOAEKAZOKEOAKE"),
-            Articles(2, "Title2", "eeokzaoekakzeokaozek")
-        )
+        val list = prepareData();
 
         val model = mock<Model>{
             on {getArticleList()} doReturn list
@@ -29,10 +31,10 @@ class PresenterTests {
         verifyNoMoreInteractions(model, view)
     }
 
+
     @Test
     fun testArticlePrensenter(){
-        //set data
-        val article = Articles(1, "Title1", "Deslakzeoakekaoekaokeoazke")
+        val article = prepareData()[0]
         val id = 1;
 
         //mock
@@ -71,6 +73,51 @@ class PresenterTests {
         verify(view).displayNotFound()
         //test no interaction with another pieaces of code
         verifyNoMoreInteractions(model, view)
+    }
+
+    @Test
+    fun testLogin(){
+
+    }
+    //todo -> tests for add comment / delete comment only as admin
+    //todo -> tests list comments
+    //todo -> test login
+    // todo -> test decrypt is bcrypt well encoded@
+
+
+    /**
+     * Prepare data for one test
+     */
+    fun prepareData(): List<Articles>{
+        val comments_article1 = listOf(
+            Comments(1, "Comment 1 article 1", 1),
+            Comments(2, "Comment 2 for article 1",1 )
+        )
+        val comments_article2 = listOf(
+            Comments(1, "Comment 1 article 2", 2),
+            Comments(2, "Comment 2 article 2", 2)
+        )
+        val ac = ArrayList<Comments>()
+        val ac2 = ArrayList<Comments>()
+
+        val iterator = comments_article1.iterator()
+        val i2 = comments_article2.iterator()
+
+        while(iterator.hasNext()){
+            iterator.next()
+            ac.add(iterator.next())
+        }
+
+        while(i2.hasNext()){
+            i2.next()
+            ac2.add(i2.next())
+        }
+
+        val list = listOf(
+            Articles(1, "Titlte", "ZEOAKOAEKAZOKEOAKE", ac),
+            Articles(2, "Title2", "eeokzaoekakzeokaozek", ac2)
+        )
+        return list
     }
 
 }
