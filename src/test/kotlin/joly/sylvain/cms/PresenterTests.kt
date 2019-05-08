@@ -4,6 +4,7 @@ import com.nhaarman.mockitokotlin2.*
 import joly.sylvain.cms.control.ArticleByIdControllerImpl
 import joly.sylvain.cms.control.ArticleListControllerImpl
 import joly.sylvain.cms.control.AuthControllerImpl
+import joly.sylvain.cms.control.CommentCreateControllerImpl
 import joly.sylvain.cms.model.Articles
 import joly.sylvain.cms.model.Comments
 import joly.sylvain.cms.model.Users
@@ -111,10 +112,102 @@ class PresenterTests {
         verifyNoMoreInteractions(model, view)
     }
 
+    @Test
+    fun getListCommentsLinkArticles(){
+        val article = prepareData()[0]
+        val id = 1;
+        print(article);
+        //mock
+        val model = mock<Model> {
+            on { getArticle(id) } doReturn article
+        }
+
+
+        //simulation of scenario
+        val view = mock<ArticleByIdController.View>()
+        val presenter = ArticleByIdControllerImpl(model, view)
+        presenter.start(id);
+
+
+        //test method
+        verify(model).getArticle(id)
+        verify(view).displayArticleById(article)
+
+        assertEquals(2,article.comments!![0].id)
+
+        verifyNoMoreInteractions(model, view)
+
+    }
+
+    @Test
+    fun createCommentTest(){
+        val content = "Test content";
+        val articleId = 1;
+
+        val model = mock<Model> {
+            on {createComment(content = content,article_id = articleId)} doReturn true
+        }
+
+        val view = mock<CommentCreateController.View>()
+        val presenter = CommentCreateControllerImpl(model, view);
+        presenter.start(content, articleId)
+
+        verify(model).createComment(content, articleId)
+        verify(view).createdSuccess()
+        verifyNoMoreInteractions(model, view)
+
+    }
+
+    @Test
+    fun createCommentFailTest(){
+        val content = "Test content";
+        val articleId = 1;
+
+        val model = mock<Model> {
+            on {createComment(content = "", article_id = 0)} doReturn false
+        }
+
+        val view = mock<CommentCreateController.View>()
+        val presenter = CommentCreateControllerImpl(model, view);
+        presenter.start(content, articleId)
+
+        verify(model).createComment(content, articleId)
+        verify(view).createdError()
+        verifyNoMoreInteractions(model, view)
+    }
+
+    @Test
+    fun deleteCommentTest(){
+
+    }
+
+    @Test
+    fun deleteCommentFailTest(){
+
+    }
+
+    @Test
+    fun createArticleTest(){
+
+    }
+
+    @Test
+    fun createArticleFailTest(){
+
+    }
+
+    @Test
+    fun deleteArticleByIdTest(){
+
+    }
+    @Test
+    fun deleteArticleByIdFailTest(){
+
+    }
+
 
 }
-//todo -> tests for add comment / delete comment only as admin
-//todo -> tests list comments
+
 
 
     /**
@@ -144,6 +237,7 @@ class PresenterTests {
             i2.next()
             ac2.add(i2.next())
         }
+
 
         val list = listOf(
             Articles(1, "Titlte", "ZEOAKOAEKAZOKEOAKE", ac),
