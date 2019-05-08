@@ -1,10 +1,7 @@
 package joly.sylvain.cms
 
 import com.nhaarman.mockitokotlin2.*
-import joly.sylvain.cms.control.ArticleByIdControllerImpl
-import joly.sylvain.cms.control.ArticleListControllerImpl
-import joly.sylvain.cms.control.AuthControllerImpl
-import joly.sylvain.cms.control.CommentCreateControllerImpl
+import joly.sylvain.cms.control.*
 import joly.sylvain.cms.model.Articles
 import joly.sylvain.cms.model.Comments
 import joly.sylvain.cms.model.Users
@@ -178,31 +175,106 @@ class PresenterTests {
 
     @Test
     fun deleteCommentTest(){
+        val commentId = 1;
 
+        val model = mock<Model> {
+            on {removeCommentById(commentId)} doReturn true
+        }
+
+        val view = mock<CommentDeleteController.View>()
+        val presenter = CommentDeleteControllerImpl(model, view);
+        presenter.start(commentId)
+
+        verify(model).removeCommentById(commentId)
+        verify(view).deletedSuccess()
+        verifyNoMoreInteractions(model, view)
     }
 
     @Test
     fun deleteCommentFailTest(){
+        val commentId = 1;
 
+        val model = mock<Model> {
+            on {removeCommentById(commentId)} doReturn false
+        }
+
+        val view = mock<CommentDeleteController.View>()
+        val presenter = CommentDeleteControllerImpl(model, view);
+        presenter.start(commentId)
+
+        verify(model).removeCommentById(commentId)
+        verify(view).deletedError()
+        verifyNoMoreInteractions(model, view)
     }
 
     @Test
     fun createArticleTest(){
+        val text = "Article content"
+        val title = "Title for article"
 
+        val model = mock<Model> {
+            on {createArticle(text = text, title = title)} doReturn true
+        }
+
+        val view = mock<ArticleCreateController.View>()
+        val presenter = ArticleCreateControllerImpl(model, view);
+        presenter.start(text, title)
+
+        verify(model).createArticle(text, title)
+        verify(view).createdSuccess()
+        verifyNoMoreInteractions(model, view)
     }
 
     @Test
     fun createArticleFailTest(){
+        val text = "Article content"
+        val title = "Title for article"
 
+        val model = mock<Model> {
+            on {createArticle(text = text, title = title)} doReturn false
+        }
+
+        val view = mock<ArticleCreateController.View>()
+        val presenter = ArticleCreateControllerImpl(model, view);
+        presenter.start(text, title)
+
+        verify(model).createArticle(text, title)
+        verify(view).createdError()
+        verifyNoMoreInteractions(model, view)
     }
 
     @Test
     fun deleteArticleByIdTest(){
+        val articleId = 1
 
+        val model = mock<Model> {
+            on {removeArticleById(articleId)} doReturn true
+        }
+
+        val view = mock<ArticleDeleteController.View>()
+        val presenter = ArticleDeleteControllerImpl(model, view);
+        presenter.start(articleId)
+
+        verify(model).removeArticleById(articleId)
+        verify(view).deletedSuccess()
+        verifyNoMoreInteractions(model, view)
     }
+
     @Test
     fun deleteArticleByIdFailTest(){
+        val articleId = 1
 
+        val model = mock<Model> {
+            on {removeArticleById(articleId)} doReturn false
+        }
+
+        val view = mock<ArticleDeleteController.View>()
+        val presenter = ArticleDeleteControllerImpl(model, view);
+        presenter.start(articleId)
+
+        verify(model).removeArticleById(articleId)
+        verify(view).deletedError()
+        verifyNoMoreInteractions(model, view)
     }
 
 

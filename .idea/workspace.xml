@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532adb7c-ed06-48a3-aaf8-7657e5445fa1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -102,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="203" column="29" selection-start-line="203" selection-start-column="29" selection-end-line="203" selection-end-column="29" />
+            <state relative-caret-position="248">
+              <caret line="275" column="35" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
               <folding>
                 <element signature="e#26#331#0" expanded="true" />
               </folding>
@@ -323,7 +322,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557346731848" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557347187093" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -364,7 +363,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PresenterTests.createCommentFailTest">
+  <component name="RunManager" selected="JUnit.PresenterTests.deleteArticleByIdFailTest">
     <configuration name="CalculatorTest (1)" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
@@ -380,7 +379,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PresenterTests.createCommentFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PresenterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
         <pattern>
@@ -390,13 +389,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
       <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="createCommentFailTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PresenterTests.createArticleFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="joly.sylvain.cms.CMS-IIM.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="joly.sylvain.cms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
+      <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
+      <option name="METHOD_NAME" value="createArticleFailTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PresenterTests.createCommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PresenterTests.createArticleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
         <pattern>
@@ -406,13 +420,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
       <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="createCommentTest" />
+      <option name="METHOD_NAME" value="createArticleTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PresenterTests.getListCommentsLinkArticles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PresenterTests.deleteArticleByIdFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
         <pattern>
@@ -422,13 +436,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
       <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="getListCommentsLinkArticles" />
+      <option name="METHOD_NAME" value="deleteArticleByIdFailTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PresenterTests.testArticlePrensenter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PresenterTests.deleteArticleByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
         <pattern>
@@ -438,23 +452,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
       <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="testArticlePrensenter" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PresenterTests.testGetUserByEmailAndAuthNotOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="joly.sylvain.cms.CMS-IIM.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="joly.sylvain.cms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
-      <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="testGetUserByEmailAndAuthNotOk" />
+      <option name="METHOD_NAME" value="deleteArticleByIdTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -478,11 +476,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PresenterTests.createCommentFailTest" />
-        <item itemvalue="JUnit.PresenterTests.createCommentTest" />
-        <item itemvalue="JUnit.PresenterTests.getListCommentsLinkArticles" />
-        <item itemvalue="JUnit.PresenterTests.testArticlePrensenter" />
-        <item itemvalue="JUnit.PresenterTests.testGetUserByEmailAndAuthNotOk" />
+        <item itemvalue="JUnit.PresenterTests.deleteArticleByIdFailTest" />
+        <item itemvalue="JUnit.PresenterTests.deleteArticleByIdTest" />
+        <item itemvalue="JUnit.PresenterTests.createArticleFailTest" />
+        <item itemvalue="JUnit.PresenterTests.createArticleTest" />
+        <item itemvalue="JUnit.PresenterTests" />
       </list>
     </recent_temporary>
   </component>
@@ -499,29 +497,11 @@
       <workItem from="1556784015982" duration="197000" />
       <workItem from="1556784234586" duration="39531000" />
       <workItem from="1556980757263" duration="17414000" />
-      <workItem from="1557058069398" duration="20607000" />
+      <workItem from="1557058069398" duration="21062000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.08 at 18h 17m 33s.xml">
-      <configuration name="PresenterTests.getListCommentsLinkArticles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.08 at 18h 18m 18s.xml">
-      <configuration name="PresenterTests.getListCommentsLinkArticles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.08 at 18h 18m 41s.xml">
-      <configuration name="PresenterTests.getListCommentsLinkArticles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.08 at 18h 19m 27s.xml">
-      <configuration name="PresenterTests.getListCommentsLinkArticles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.08 at 18h 19m 42s.xml">
-      <configuration name="PresenterTests.getListCommentsLinkArticles" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.08 at 18h 21m 44s.xml">
-      <configuration name="PresenterTests.getListCommentsLinkArticles" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.08 at 19h 11m 02s.xml">
       <configuration name="PresenterTests.getListCommentsLinkArticles" configurationId="JUnit" />
     </history-entry>
@@ -534,9 +514,27 @@
     <history-entry file="PresenterTests_createCommentFailTest - 2019.05.08 at 22h 18m 10s.xml">
       <configuration name="PresenterTests.createCommentFailTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PresenterTests_deleteCommentTest - 2019.05.08 at 22h 20m 47s.xml">
+      <configuration name="PresenterTests.deleteCommentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_deleteCommentFailTest - 2019.05.08 at 22h 21m 19s.xml">
+      <configuration name="PresenterTests.deleteCommentFailTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests - 2019.05.08 at 22h 21m 26s.xml">
+      <configuration name="PresenterTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_createArticleTest - 2019.05.08 at 22h 23m 31s.xml">
+      <configuration name="PresenterTests.createArticleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_createArticleFailTest - 2019.05.08 at 22h 25m 56s.xml">
+      <configuration name="PresenterTests.createArticleFailTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_deleteArticleByIdTest - 2019.05.08 at 22h 26m 03s.xml">
+      <configuration name="PresenterTests.deleteArticleByIdTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77749000" />
+    <option name="totallyTimeSpent" value="78204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -971,8 +969,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="203" column="29" selection-start-line="203" selection-start-column="29" selection-end-line="203" selection-end-column="29" />
+        <state relative-caret-position="248">
+          <caret line="275" column="35" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
           <folding>
             <element signature="e#26#331#0" expanded="true" />
           </folding>
