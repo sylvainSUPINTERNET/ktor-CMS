@@ -3,23 +3,24 @@ package joly.sylvain.cms
 import com.nhaarman.mockitokotlin2.*
 import joly.sylvain.cms.control.ArticleByIdControllerImpl
 import joly.sylvain.cms.control.ArticleListControllerImpl
+import joly.sylvain.cms.control.AuthControllerImpl
 import joly.sylvain.cms.model.Articles
 import joly.sylvain.cms.model.Comments
+import joly.sylvain.cms.model.Users
 import org.junit.Assert.*
 import org.junit.Test
 import java.util.ArrayList
-
 
 
 class PresenterTests {
 
 
     @Test
-    fun testArticleListPrensenter(){
+    fun testArticleListPrensenter() {
         val list = prepareData();
 
-        val model = mock<Model>{
-            on {getArticleList()} doReturn list
+        val model = mock<Model> {
+            on { getArticleList() } doReturn list
         }
         val view = mock<ArticleListController.View>()
         val presenter = ArticleListControllerImpl(model, view)
@@ -33,13 +34,14 @@ class PresenterTests {
 
 
     @Test
-    fun testArticlePrensenter(){
+    fun testArticlePrensenter() {
         val article = prepareData()[0]
         val id = 1;
 
         //mock
         val model = mock<Model> {
-            on {getArticle(id)} doReturn article}
+            on { getArticle(id) } doReturn article
+        }
 
 
         //simulation of scenario
@@ -56,10 +58,11 @@ class PresenterTests {
     }
 
     @Test
-    fun testInvalidArticlePrensenter(){
+    fun testInvalidArticlePrensenter() {
         //mock
         val model = mock<Model> {
-            on {getArticle(any())} doReturn null}
+            on { getArticle(any()) } doReturn null
+        }
 
 
         //simulation of scenario
@@ -76,22 +79,51 @@ class PresenterTests {
     }
 
     @Test
-    fun testLogin(){
+    fun testGetUserByEmailAndAuthOk() {
+        val UsersAdmin = prepareAdminUser();
+        val model = mock<Model> {
+            on { getUserBy(UsersAdmin.email) } doReturn UsersAdmin
+        }
 
+        val view = mock<AuthController.View>()
+        val presenter = AuthControllerImpl(model, view);
+        presenter.start(UsersAdmin.email, "admin")
+
+        verify(model).getUserBy(UsersAdmin.email)
+        verify(view).loginSuccess(UsersAdmin)
+        verifyNoMoreInteractions(model, view)
     }
-    //todo -> tests for add comment / delete comment only as admin
-    //todo -> tests list comments
-    //todo -> test login
-    // todo -> test decrypt is bcrypt well encoded@
+
+    @Test
+    fun testGetUserByEmailAndAuthNotOk() {
+        val UsersAdmin = prepareAdminUser();
+        val model = mock<Model> {
+            on { getUserBy(UsersAdmin.email) } doReturn UsersAdmin
+        }
+
+        val view = mock<AuthController.View>()
+        val presenter = AuthControllerImpl(model, view);
+        presenter.start(UsersAdmin.email, "ezaeklaze")
+
+
+        verify(model).getUserBy(UsersAdmin.email)
+        verify(view).loginError()
+        verifyNoMoreInteractions(model, view)
+    }
+
+
+}
+//todo -> tests for add comment / delete comment only as admin
+//todo -> tests list comments
 
 
     /**
      * Prepare data for one test
      */
-    fun prepareData(): List<Articles>{
+    fun prepareData(): List<Articles> {
         val comments_article1 = listOf(
             Comments(1, "Comment 1 article 1", 1),
-            Comments(2, "Comment 2 for article 1",1 )
+            Comments(2, "Comment 2 for article 1", 1)
         )
         val comments_article2 = listOf(
             Comments(1, "Comment 1 article 2", 2),
@@ -103,12 +135,12 @@ class PresenterTests {
         val iterator = comments_article1.iterator()
         val i2 = comments_article2.iterator()
 
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             iterator.next()
             ac.add(iterator.next())
         }
 
-        while(i2.hasNext()){
+        while (i2.hasNext()) {
             i2.next()
             ac2.add(i2.next())
         }
@@ -120,4 +152,6 @@ class PresenterTests {
         return list
     }
 
-}
+    fun prepareAdminUser(): Users {
+        return Users("admin", "admin@admin.fr", "ADMIN", "\$2a\$10\$1lnRSR0uzCuHXAaEm02rzuygFLUMrKNdwwHKBSQElgQuvzQxReHBC")
+    }
