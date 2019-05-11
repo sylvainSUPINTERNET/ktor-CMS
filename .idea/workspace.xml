@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532adb7c-ed06-48a3-aaf8-7657e5445fa1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article_admin.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article_admin.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article_form_admin.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article_form_admin.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/authentication.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/authentication.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home_admin.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home_admin.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logout_success.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logout_success.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -89,50 +98,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="275" column="35" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
-              <folding>
-                <element signature="e#26#331#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="229">
+                <caret line="90" column="14" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf.dist">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+            <state relative-caret-position="32">
+              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/AuthController.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -159,6 +150,8 @@
       <find>print</find>
       <find>redir</find>
       <find>permanen</find>
+      <find>back</find>
+      <find>credent</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/CommentCreateControllerImpl.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/ArticleListControllerImpl.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/model/Users.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/authentication.ftl" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/AuthSession.kt" />
@@ -199,15 +191,10 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/CommentCreateController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/CommentDeleteController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/CommentDeleteControllerImpl.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/logout_success.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/application.conf.dist" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.conf" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/article.ftl" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleCreateController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/ArticleCreateControllerImpl.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/article_form_admin.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/article_admin.ftl" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleDeleteController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/control/ArticleDeleteControllerImpl.kt" />
@@ -215,9 +202,15 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/AppComponents.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/home_admin.ftl" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/home_admin.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/logout_success.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/article.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/article_admin.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/article_form_admin.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/authentication.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.conf" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -227,10 +220,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1" />
+    <option name="y" value="121" />
     <option name="width" value="1440" />
-    <option name="height" value="813" />
+    <option name="height" value="814" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -278,9 +272,7 @@
               <item name="CMS-IIM" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="control" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMS-IIM" type="b2602c69:ProjectViewProjectNode" />
@@ -288,6 +280,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMS-IIM" type="b2602c69:ProjectViewProjectNode" />
@@ -322,7 +315,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557347187093" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557612709106" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -363,7 +356,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PresenterTests.deleteArticleByIdFailTest">
+  <component name="RunManager" selected="JUnit.PresenterTests.deleteCommentFailTest">
     <configuration name="CalculatorTest (1)" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
@@ -379,7 +372,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PresenterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PresenterTests.createCommentFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
         <pattern>
@@ -389,28 +382,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
       <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PresenterTests.createArticleFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="joly.sylvain.cms.CMS-IIM.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="joly.sylvain.cms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
-      <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="createArticleFailTest" />
+      <option name="METHOD_NAME" value="createCommentFailTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PresenterTests.createArticleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PresenterTests.createCommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
         <pattern>
@@ -420,13 +398,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
       <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="createArticleTest" />
+      <option name="METHOD_NAME" value="createCommentTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PresenterTests.deleteArticleByIdFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PresenterTests.deleteCommentFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
         <pattern>
@@ -436,13 +414,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
       <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="deleteArticleByIdFailTest" />
+      <option name="METHOD_NAME" value="deleteCommentFailTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PresenterTests.deleteArticleByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PresenterTests.deleteCommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="joly.sylvain.cms.CMS-IIM.test" />
       <extension name="coverage">
         <pattern>
@@ -452,7 +430,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
       <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
-      <option name="METHOD_NAME" value="deleteArticleByIdTest" />
+      <option name="METHOD_NAME" value="deleteCommentTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PresenterTests.getListCommentsLinkArticles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="joly.sylvain.cms.CMS-IIM.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="joly.sylvain.cms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="joly.sylvain.cms" />
+      <option name="MAIN_CLASS_NAME" value="joly.sylvain.cms.PresenterTests" />
+      <option name="METHOD_NAME" value="getListCommentsLinkArticles" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -476,11 +470,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PresenterTests.deleteArticleByIdFailTest" />
-        <item itemvalue="JUnit.PresenterTests.deleteArticleByIdTest" />
-        <item itemvalue="JUnit.PresenterTests.createArticleFailTest" />
-        <item itemvalue="JUnit.PresenterTests.createArticleTest" />
-        <item itemvalue="JUnit.PresenterTests" />
+        <item itemvalue="JUnit.PresenterTests.deleteCommentFailTest" />
+        <item itemvalue="JUnit.PresenterTests.createCommentFailTest" />
+        <item itemvalue="JUnit.PresenterTests.deleteCommentTest" />
+        <item itemvalue="JUnit.PresenterTests.createCommentTest" />
+        <item itemvalue="JUnit.PresenterTests.getListCommentsLinkArticles" />
       </list>
     </recent_temporary>
   </component>
@@ -497,44 +491,44 @@
       <workItem from="1556784015982" duration="197000" />
       <workItem from="1556784234586" duration="39531000" />
       <workItem from="1556980757263" duration="17414000" />
-      <workItem from="1557058069398" duration="21062000" />
+      <workItem from="1557058069398" duration="24074000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.08 at 19h 11m 02s.xml">
+    <history-entry file="PresenterTests_testArticleListPrensenter - 2019.05.11 at 23h 51m 46s.xml">
+      <configuration name="PresenterTests.testArticleListPrensenter" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_testArticlePrensenter - 2019.05.11 at 23h 51m 52s.xml">
+      <configuration name="PresenterTests.testArticlePrensenter" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_testInvalidArticlePrensenter - 2019.05.11 at 23h 51m 56s.xml">
+      <configuration name="PresenterTests.testInvalidArticlePrensenter" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_testGetUserByEmailAndAuthOk - 2019.05.11 at 23h 52m 14s.xml">
+      <configuration name="PresenterTests.testGetUserByEmailAndAuthOk" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_testGetUserByEmailAndAuthNotOk - 2019.05.11 at 23h 52m 19s.xml">
+      <configuration name="PresenterTests.testGetUserByEmailAndAuthNotOk" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_getListCommentsLinkArticles - 2019.05.11 at 23h 52m 34s.xml">
       <configuration name="PresenterTests.getListCommentsLinkArticles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PresenterTests_createCommentTest - 2019.05.08 at 22h 17m 10s.xml">
+    <history-entry file="PresenterTests_createCommentTest - 2019.05.11 at 23h 52m 38s.xml">
       <configuration name="PresenterTests.createCommentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PresenterTests_createCommentFailTest - 2019.05.08 at 22h 17m 53s.xml">
-      <configuration name="PresenterTests.createCommentFailTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_createCommentFailTest - 2019.05.08 at 22h 18m 10s.xml">
-      <configuration name="PresenterTests.createCommentFailTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_deleteCommentTest - 2019.05.08 at 22h 20m 47s.xml">
+    <history-entry file="PresenterTests_deleteCommentTest - 2019.05.11 at 23h 52m 51s.xml">
       <configuration name="PresenterTests.deleteCommentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PresenterTests_deleteCommentFailTest - 2019.05.08 at 22h 21m 19s.xml">
+    <history-entry file="PresenterTests_createCommentFailTest - 2019.05.11 at 23h 52m 57s.xml">
+      <configuration name="PresenterTests.createCommentFailTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PresenterTests_deleteCommentFailTest - 2019.05.11 at 23h 53m 03s.xml">
       <configuration name="PresenterTests.deleteCommentFailTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests - 2019.05.08 at 22h 21m 26s.xml">
-      <configuration name="PresenterTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_createArticleTest - 2019.05.08 at 22h 23m 31s.xml">
-      <configuration name="PresenterTests.createArticleTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_createArticleFailTest - 2019.05.08 at 22h 25m 56s.xml">
-      <configuration name="PresenterTests.createArticleFailTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PresenterTests_deleteArticleByIdTest - 2019.05.08 at 22h 26m 03s.xml">
-      <configuration name="PresenterTests.deleteArticleByIdTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78204000" />
+    <option name="totallyTimeSpent" value="81216000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -546,10 +540,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="815" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -557,8 +551,8 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.2884882" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5076283" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.2876902" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39389735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -767,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/authentication.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleByIdController.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -808,27 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/logout_success.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -856,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article_form_admin.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/ArticleCreateController.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -874,44 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article_admin.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="312">
-            <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home_admin.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" selection-start-line="18" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -932,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/AuthController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/MysqlModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4">
@@ -953,13 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/Model.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -967,13 +874,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/AuthController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/joly/sylvain/cms/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="37" column="3" selection-start-line="37" selection-end-line="37" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home_admin.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/logout_success.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/authentication.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/joly/sylvain/cms/PresenterTests.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="275" column="35" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
-          <folding>
-            <element signature="e#26#331#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1733">
+          <caret line="280" column="1" lean-forward="true" selection-start-line="280" selection-start-column="1" selection-end-line="280" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" selection-start-line="18" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="12" selection-start-line="17" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article_admin.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="20" column="25" selection-start-line="20" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article_form_admin.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="229">
+            <caret line="90" column="14" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

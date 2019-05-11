@@ -14,6 +14,8 @@
 <h1 class="text-center">Ajouter un article</h1>
 <p>(logged as admin)</p>
 
+<a href="/" class="m-3">Back</a>
+
 
 <form method="post" action="/article/admin" class="m-5">
     <div class="form-group">

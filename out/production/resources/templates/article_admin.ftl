@@ -13,15 +13,12 @@
 <body class="container">
 <h1 class="text-center">Article: ${title}
 </h1>
-<div class="row">
-    <div class="col">
-        <a href="/article/admin/${id}/delete" class="btn btn-warning btn-md m-5">Delete article (<small>Comments linked will deleted</small>)</a>
-    </div>
-</div>
 
 <p>(logged as admin)</p>
 
 <p>${text}</p>
+
+<a href="/" class="m-3">Back</a>
 
 
 <form method="post" action="/comment" class="m-5">
@@ -31,6 +28,13 @@
     </div>
     <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
+
+<div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+        <a href="/article/admin/${id}/delete" class="btn btn-danger btn-md m-5"><i class="fa fa-ban"></i> Delete article (<small>Comments linked will deleted</small>)</a>
+    </div>
+</div>
 
 <ul class="list-group">
     <#if comments?has_content>

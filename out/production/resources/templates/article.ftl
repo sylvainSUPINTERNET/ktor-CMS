@@ -15,6 +15,7 @@
 
 <p>${text}</p>
 
+<a href="/" class="m-3">Back</a>
 
 <form method="post" action="/comment" class="m-5">
     <div class="form-group">

@@ -28,6 +28,7 @@
                             <div class="text-center">
                                 <button type="submit" id="sendlogin" class="btn btn-primary">login</button>
                             </div>
+                            <a href="/" class="m-3">Back</a>
                         </form>
                     </div>
                 </div>

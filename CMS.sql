@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  Dim 05 mai 2019 à 18:48
+-- Généré le :  sam. 11 mai 2019 à 21:26
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.8
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `CMS`
 --
+CREATE DATABASE IF NOT EXISTS `CMS` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `CMS`;
 
 -- --------------------------------------------------------
 
@@ -58,13 +60,13 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `content`, `article_id`) VALUES
-(16, 'ezae', 3),
-(22, 'zeae', 3),
-(23, 'Admin post a new comment', 1),
-(24, 'ezaeazeaze', 3),
-(25, 'oke', 3),
-(26, 'zezeakeakkaeaze', 3),
-(29, 'add new comment\r\n', 5);
+(16, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
+(22, 'Lorem ipsum dolor', 3),
+(23, 'Consectetur adipiscing elit.', 1),
+(24, 'Lorem ipsum dolor sit adipiscing elit.', 3),
+(25, 'Ladipiscing elit.', 3),
+(26, 'Lour adipiscing.', 3),
+(29, 'OIpsum dolo.', 5);
 
 -- --------------------------------------------------------
 

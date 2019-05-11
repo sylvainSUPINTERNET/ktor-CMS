@@ -13,11 +13,11 @@
 </head>
 <body class="container">
 
-<p>Disconnected with success</p>
+<h3 class="text-center m-5">Disconnected with success !</h3>
+<div class="text-center">
+    Go back to the <a href="/">home</a> page
+    or <a href="/authentication">login</a> with your admin account</div>
 <br>
-<a href="/">Home page</a>
-<br>
-<a href="/authentication">Login</a>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
