@@ -81,6 +81,14 @@ __*ADMIN (logged in)*__
 </li>
 </ul>
 
+__*Tests*__ (data automatically generated inside the test file)
+<ul>
+<li>
+    Each features are tested : <code>./src/test/kotlin/joly/sylvain/cms/*</code>
+</li>
+
+</ul>
+
 __*BONUS*__
     <ul>
         <li>
